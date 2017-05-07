@@ -1,9 +1,9 @@
 package spring.boot.mybatis.example.respository;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import spring.boot.mybatis.example.mapper.UserMapper;
+import spring.boot.mybatis.example.model.User;
 
 import java.util.List;
 

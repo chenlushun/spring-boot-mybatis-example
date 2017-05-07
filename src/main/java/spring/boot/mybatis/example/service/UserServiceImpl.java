@@ -1,8 +1,8 @@
 package spring.boot.mybatis.example.service;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import spring.boot.mybatis.example.model.User;
 import spring.boot.mybatis.example.respository.UserRespository;
 
 import java.util.List;

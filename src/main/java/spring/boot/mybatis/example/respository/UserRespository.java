@@ -1,6 +1,6 @@
 package spring.boot.mybatis.example.respository;
 
-import org.apache.catalina.User;
+import spring.boot.mybatis.example.model.User;
 
 import java.util.List;
 
