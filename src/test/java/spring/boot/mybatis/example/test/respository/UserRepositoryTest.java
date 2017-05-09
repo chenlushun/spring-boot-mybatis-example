@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 import spring.boot.mybatis.example.model.User;
 import spring.boot.mybatis.example.respository.UserRespository;
 
@@ -20,6 +21,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles(profiles = "test")
+@Transactional
 public class UserRepositoryTest{
 
     @Autowired
@@ -27,6 +29,17 @@ public class UserRepositoryTest{
 
     @Test
     public void demo() {
+        List<User> list = userRepository.findAll();
+        Assert.assertNotNull(list);
+    }
+
+    @Test
+    public void insert(){
+        User user=new User();
+        user.setAge(19);
+        user.setId(2L);
+        user.setUserName("Alex");
+        userRepository.insert(user);
         List<User> list = userRepository.findAll();
         Assert.assertNotNull(list);
     }

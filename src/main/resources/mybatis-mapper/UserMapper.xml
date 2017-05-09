@@ -18,4 +18,8 @@
         <include refid="Base_Column_List"/>
         from user
     </select>
+    
+    <insert id="insert" parameterType="spring.boot.mybatis.example.model.User">
+        insert into USER (id,name,age) VALUES (#{id},#{userName},#{age})
+    </insert>
 </mapper>

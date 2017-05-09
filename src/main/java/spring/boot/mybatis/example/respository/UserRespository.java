@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface UserRespository {
     public List<User> findAll();
+
+    public void insert(User user);
 }

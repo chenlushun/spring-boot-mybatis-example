@@ -12,4 +12,6 @@ import java.util.List;
 public interface UserMapper {
 
     public List<User> findAll();
+
+    public void insert(User user);
 }
